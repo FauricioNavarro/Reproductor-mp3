@@ -48,11 +48,10 @@ public class MainActivity extends AppCompatActivity {
         seekBarVolumen = (SeekBar) findViewById(R.id.seekBarvolumen);
         seekBarAvance = (SeekBar) findViewById(R.id.seekBaravance);
         letra = findViewById(R.id.letra);
-        letra.setX(0f);
-        letra.setY(180f);
         ArrayItem = new ArrayList<>();
         cargarLista(this);
-
+        letra.setX(0f);
+        letra.setY(180f);
         mediaPlayer = MediaPlayer.create(getApplicationContext(), play_list[cancion_actual]);
         audioManager= (AudioManager)getSystemService(Context.AUDIO_SERVICE);
 
