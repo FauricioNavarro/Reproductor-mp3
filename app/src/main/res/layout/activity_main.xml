@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.example.fauricio.reproducotor_mp3.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/screen"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/letra"
+            android:layout_width="match_parent"
+            android:layout_height="1060px"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBaravance"
+        android:layout_below="@id/screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/panel"
+        android:layout_below="@id/seekBaravance"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+        
+        <Button
+            android:id="@+id/anterior_button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/skip_previous"
+            android:onClick="previous_click"/>
+
+        <Button
+            android:id="@+id/play_button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/play"
+            android:onClick="play_click"/>
+
+        <Button
+            android:id="@+id/siguiente_button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/skip_next"
+            android:onClick="next_click"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/text_volumen"
+        android:layout_below="@id/panel"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volumen"/>
+
+    <SeekBar
+        android:id="@+id/seekBarvolumen"
+        android:layout_below="@id/text_volumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:layout_below="@id/seekBarvolumen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/LV_items"/>
+    
+</RelativeLayout>
