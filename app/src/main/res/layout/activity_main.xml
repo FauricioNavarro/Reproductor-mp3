@@ -77,7 +77,7 @@
     <ListView
         android:layout_below="@id/seekBarvolumen"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="400dp"
         android:id="@+id/LV_items"/>
     
 </RelativeLayout>
